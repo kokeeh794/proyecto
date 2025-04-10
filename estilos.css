@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #66cfff, #2196f3);
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    flex: 0;
+    padding-left: 10px; /* Ajuste para pegar más el logo a la izquierda */
+}
+
+.logo {
+    height: 90px; /* Aumento del tamaño del logo */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+.ubicacion {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ubicacion h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2196f3;
+}
+
+footer {
+    background-color: #2196f3;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.hero {
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+    text-align: left; 
+    padding-left: 20px;
+}
+
+.hero-img {
+    max-width: 40%; 
+    height: auto;
+    object-fit: contain;
+}
+
