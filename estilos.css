@@ -2,86 +2,321 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #333;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to right, #66cfff, #2196f3);
     padding: 10px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo-container {
-    flex: 0;
-    padding-left: 10px; /* Ajuste para pegar más el logo a la izquierda */
-}
-
-.logo {
-    height: 90px; /* Aumento del tamaño del logo */
+  }
+  
+  .logo {
+    height: 110px;
     width: auto;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
-    flex: 2;
     justify-content: flex-end;
-}
-
-.nav-links li a {
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: white;
     font-weight: 600;
     font-size: 16px;
     padding: 8px 12px;
     transition: background-color 0.3s ease;
-}
-
-.nav-links li a:hover {
+  }
+  
+  .nav-links li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-}
-
-
-.ubicacion {
+  }
+  
+  .ubicacion {
     padding: 40px 20px;
-    text-align: center;
-}
-
-.ubicacion h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+    text-align: left;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ubicacion h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
     color: #2196f3;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #2196f3;
     padding: 20px;
     color: white;
     text-align: center;
-}
-.hero {
-    height: 50vh;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .hero-content {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    background: linear-gradient(to bottom, #e6f7ff, #ffffff);
-    text-align: left; 
-    padding-left: 20px;
-}
-
-.hero-img {
-    max-width: 40%; 
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero-img {
+    max-width: 40%;
     height: auto;
-    object-fit: contain;
-}
-
+  }
+  
+  .bonos {
+    padding: 60px 20px;
+    background: url('img/fondo-bonos.jpg') no-repeat center center;
+    background-size: cover;
+    border-top: 4px solid #2e2545;
+    border-bottom: 4px solid #2e2545;
+  }
+  
+  .bonos-titulo {
+    text-align: center;
+    color: #2e2545;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .bono {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border: 2px solid #2e2545;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .bono-info h3, .bono-info p, .caducidad {
+    color: #2e2545;
+  }
+  
+  .bono-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .bono-info p {
+    font-size: 1rem;
+  }
+  
+  .caducidad {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .precio {
+    display: block;
+    font-size: 2rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .bono-btn, .ver-mas-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bono-btn:hover, .ver-mas-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .ver-mas {
+    text-align: center;
+    margin: 30px 0 80px;
+  }
+  
+  .planes-adicionales {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .titulo-planes {
+    text-align: center;
+    color: #2196f3;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .contenedor-planes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .plan-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .plan-card h3 {
+    color: #2196f3;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .precio-plan {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e2545;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .precio-plan span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+  }
+  
+  .beneficios-plan {
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  
+  .beneficios-plan li {
+    padding: 8px 0 8px 30px;
+    color: #555;
+  }
+  
+  .boton-plan {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #2196f3, #66cfff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .boton-plan:hover {
+    background: linear-gradient(to right, #1976d2, #4facfe);
+    transform: translateY(-2px);
+  }
+  
+  .plan-card.familiar { border-top: 5px solid #4CAF50; }
+  .plan-card.pareja { border-top: 5px solid #E91E63; }
+  .plan-card.jubilados { border-top: 5px solid #FF9800; }
+  
+  .promocion-especial {
+    background: linear-gradient(to right, #66cfff, #2196f3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 3px;
+  }
+  
+  .promocion-contenido h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .promocion-subtitulo {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+  
+  .promocion-destacado h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .matricula {
+    font-size: 1.2rem;
+  }
+  
+  .promocion-validez {
+    margin: 20px 0;
+    font-weight: bold;
+    background-color: #e74c3c;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  .promocion-beneficios {
+    list-style: none;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .promocion-beneficios li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .promocion-cta h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+  
+  .precio-promocion {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin: 10px 0;
+  }
+  
