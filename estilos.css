@@ -368,3 +368,65 @@
     margin-bottom: 40px; 
     font-size: 15px;
   }
+  .carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .carrusel-imagenes img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  .controles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+  }
+  
+  .boton {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 5px;
+  }
+  .botones-extra {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .boton-rojo {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-rojo:hover {
+    background-color: #c0392b;
+  }
+    
