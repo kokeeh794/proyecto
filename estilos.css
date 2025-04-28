@@ -429,4 +429,50 @@
   .boton-rojo:hover {
     background-color: #c0392b;
   }
-    
+  .info-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .info-title {
+    text-align: center;
+    font-size: 32px;
+    color: #ff5b3d;
+    margin-bottom: 40px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .info-card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .info-card img {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .info-card h3 {
+    color: blue;
+    margin-bottom: 10px;
+  }
+  .info-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
