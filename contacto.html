@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería - AlgeGym</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo AlgeGym" class="logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="planes.html">Planes</a></li>
+        <li><a href="horario.html">Horario</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="usuario.html">Mi Usuario</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div></div>
+
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-robot">
+        <img src="img/robot.jpg" alt="Robot Chat" />
+      </div>
+    <div class="chatbox-header">¿En qué podemos ayudarte?</div>
+    <div class="chatbox-messages" id="chatMessages">
+      <div><strong>IA:</strong> ¡Hola! ¿En qué puedo ayudarte hoy?</div>
+    </div>
+    <div class="chatbox-input">
+      <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+      <button onclick="enviarMensaje()">Enviar</button>
+    </div>
+  </div>
+  <div class="contacto-container">
+    <h1>Contacto</h1>
+  
+    <div class="contact-info">
+      <p><strong>Dirección:</strong> Calle Lince, 1207, Algeciras, Cádiz</p>
+      <p><strong>Teléfono:</strong> <a href="tel:+34600111222">+34 600 111 222</a></p>
+      <p><strong>Email:</strong> <a href="mailto:algegym@hotmail.com">algegym@hotmail.com</a></p>
+      <p><strong>Atención al cliente:</strong> <a href="mailto:atencion@algegym.com">atencion@algegym.com</a></p>
+    </div>
+  
+    <div class="redes-sociales">
+      <h2>Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/alge.gym" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/algegym" target="_blank">Facebook</a></li>
+        <li><a href="https://www.twitter.com/algegym" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+  
+    <div class="horario">
+      <h2>Horario</h2>
+      <p>Lunes a Domingo: 7:00 - 23:45</p>
+    </div>
+
+  <footer>
+    <p>&copy; 2025 AlgeGym. Todos los derechos reservados.</p>
+    <a href="https://www.instagram.com/alge.gym/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/dolphinsgymalgeciras/" target="_blank">Facebook</a>
+    <a href="https://x.com/algegym" target="_blank">Twitter</a>
+  </footer>
+
+  <script src="chat.js"></script>
+</body>
+</html>
