@@ -1,478 +1,604 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to right, #66cfff, #2196f3);
-    padding: 10px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    height: 110px;
-    width: auto;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    justify-content: flex-end;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-  }
-  
-  .ubicacion {
-    padding: 40px 20px;
-    text-align: left;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .ubicacion h2 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    color: #2196f3;
-  }
-  
-  footer {
-    background-color: #2196f3;
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, skyblue, blue);
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 110px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: auto;
+}
+
+.ubicacion {
+  flex: 0 0 45%;
+  max-width: 45%;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.ubicacion h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: blue;
+}
+
+@media (max-width: 768px) {
   .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .hero-img {
-    max-width: 40%;
-    height: auto;
-  }
-  
-  .bonos {
-    padding: 60px 20px;
-    border-top: 4px solid #2e2545;
-    border-bottom: 4px solid #2e2545;
-  }
-  
-  .bonos-titulo {
-    text-align: center;
-    color: #2e2545;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-  }
-  
-  .bono {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border: 2px solid #2e2545;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .bono-info h3, .bono-info p, .caducidad {
-    color: #2e2545;
-  }
-  
-  .bono-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .bono-info p {
-    font-size: 1rem;
-  }
-  
-  .caducidad {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .precio {
-    display: block;
-    font-size: 2rem;
-    color: #e74c3c;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .bono-btn, .ver-mas-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  .bono-btn:hover, .ver-mas-btn:hover {
-    background-color: #c0392b;
-  }
-  
-  .ver-mas {
-    text-align: center;
-    margin: 30px 0 80px;
-  }
-  
-  .planes-adicionales {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
-  }
-  
-  .titulo-planes {
-    text-align: center;
-    color: #2196f3;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-  }
-  
-  .contenedor-planes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .plan-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .plan-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .plan-card h3 {
-    color: #2196f3;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .precio-plan {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2e2545;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  
-  .precio-plan span {
-    font-size: 1rem;
-    font-weight: normal;
-    color: #666;
-  }
-  
-  .beneficios-plan {
-    list-style: none;
-    margin-bottom: 30px;
-    padding: 0;
-  }
-  
-  .beneficios-plan li {
-    padding: 8px 0 8px 30px;
-    color: #555;
-  }
-  
-  .boton-plan {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(to right, #2196f3, #66cfff);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .boton-plan:hover {
-    background: linear-gradient(to right, #1976d2, #4facfe);
-    transform: translateY(-2px);
-  }
-  
-  .plan-card.familiar { border-top: 5px solid #4CAF50; }
-  .plan-card.pareja { border-top: 5px solid #E91E63; }
-  .plan-card.jubilados { border-top: 5px solid #FF9800; }
-  
-  .promocion-especial {
-    background: linear-gradient(to right, #66cfff, #2196f3);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 3px;
-  }
-  
-  .promocion-contenido h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .promocion-subtitulo {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-  }
-  
-  .promocion-destacado h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  
-  .promocion-validez {
-    margin: 20px 0;
-    font-weight: bold;
-    background-color: #e74c3c;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-  }
-  
-  .promocion-beneficios {
-    list-style: none;
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: left;
-    padding: 0;
-  }
-  
-  .promocion-beneficios li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  .promocion-cta h3 {
-    font-size: 1.8rem;
-    margin-top: 30px;
-  }
-  
-  .precio-promocion {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffeb3b;
-    margin: 10px 0;
-  }
-  .seccion-horario {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .grid-horario {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    overflow-x: auto;
-  }
-  
-  .columna-dia {
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  
-  .dia {
-    color: #007BFF; 
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    text-transform: uppercase;
+  .hero-img,
+  .ubicacion {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-  
-  .clase {
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    width: 100%;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .seccion-horario h2 {
-    color: #007BFF;
-    text-align: center;
-    margin-bottom: 10px; 
-    font-size: 2rem;
-  }
-  .seccion-horario h3 {
-    color: #007BFF;
-    text-align: center;
-    margin-bottom: 40px; 
-    font-size: 15px;
-  }
-  .carrusel {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .carrusel-imagenes {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  .carrusel-imagenes img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  
-  .controles {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    padding: 0 10px;
-  }
-  
-  .boton {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 6px 14px;
-    border-radius: 5px;
-  }
-  .botones-extra {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .boton-rojo {
-    display: inline-block;
-    background-color: #e74c3c;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton-rojo:hover {
-    background-color: #c0392b;
-  }
-  .info-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .info-title {
-    text-align: center;
-    font-size: 32px;
-    color: #ff5b3d;
-    margin-bottom: 40px;
-  }
-  
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .info-card {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-  
-  .info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .info-card img {
-    width: 80px;
-    margin-bottom: 20px;
-  }
-  
-  .info-card h3 {
-    color: blue;
-    margin-bottom: 10px;
-  }
-  .info-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-  }
+}
+
+footer {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.bonos {
+  padding: 60px 20px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.bonos-titulo {
+  text-align: center;
+  color: black;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.bono {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.bono-info h3,
+.bono-info p,
+.caducidad {
+  color: black;
+}
+
+.bono-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.bono-info p {
+  font-size: 1rem;
+}
+
+.caducidad {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.precio {
+  display: block;
+  font-size: 2rem;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bono-btn,
+.ver-mas-btn {
+  background-color: red;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.bono-btn:hover,
+.ver-mas-btn:hover {
+  background-color: darkred;
+}
+
+.ver-mas {
+  text-align: center;
+  margin: 30px 0 80px;
+}
+
+.planes-adicionales {
+  padding: 60px 20px;
+  background-color: whitesmoke;
+}
+
+.titulo-planes {
+  text-align: center;
+  color: blue;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.contenedor-planes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h3 {
+  color: blue;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.precio-plan {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: indigo;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.precio-plan span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: darkgray;
+}
+
+.beneficios-plan {
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.beneficios-plan li {
+  padding: 8px 0 8px 30px;
+  color: dimgray;
+}
+
+.boton-plan {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, blue, skyblue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-plan:hover {
+  background: linear-gradient(to right, darkblue, lightskyblue);
+  transform: translateY(-2px);
+}
+
+.plan-card.familiar {
+  border-top: 5px solid green;
+}
+
+.plan-card.pareja {
+  border-top: 5px solid pink;
+}
+
+.plan-card.jubilados {
+  border-top: 5px solid orange;
+}
+
+.promocion-especial {
+  background: linear-gradient(to right, skyblue, blue);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 3px;
+}
+
+.promocion-contenido h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.promocion-subtitulo {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.promocion-destacado h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.promocion-validez {
+  margin: 20px 0;
+  font-weight: bold;
+  background-color: red;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.promocion-beneficios {
+  list-style: none;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+  padding: 0;
+}
+
+.promocion-beneficios li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.promocion-cta h3 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.precio-promocion {
+  font-size: 3rem;
+  font-weight: bold;
+  color: yellow;
+  margin: 10px 0;
+}
+
+.seccion-horario {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid-horario {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.columna-dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dia {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.clase {
+  background: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-horario h2 {
+  color: blue;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.seccion-horario h3 {
+  color: blue;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrusel-imagenes img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.controles {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.boton {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 5px;
+}
+
+.botones-extra {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.boton-rojo {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-rojo:hover {
+  background-color: darkred;
+}
+
+.info-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-title {
+  text-align: center;
+  font-size: 32px;
+  color: orangered;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border: 2px solid blue;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1000;
+}
+
+.chatbox-header {
+  background: blue;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chatbox-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.chatbox-input {
+  display: flex;
+  border-top: 1px solid lightgray;
+}
+
+.chatbox-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.chatbox-input button {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.chatbox-input input:focus {
+  outline: none;
+}
+
+.chatbox-input button:hover {
+  background: darkblue;
+}
+
+.contacto-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-info,
+.redes-sociales,
+.horario,
+.mapa {
+  margin-bottom: 30px;
+}
+
+.contact-info a,
+.redes-sociales a {
+  color: blue;
+  text-decoration: none;
+}
+
+.contact-info a:hover,
+.redes-sociales a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociales ul {
+  list-style: none;
+  padding: 0;
+}
+
+.redes-sociales li {
+  margin-bottom: 10px;
+}
+
+.chatbox-robot {
+  text-align: center;
+}
+
+.chatbox-robot img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
