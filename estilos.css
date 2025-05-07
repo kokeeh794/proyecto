@@ -306,6 +306,15 @@ footer a:hover {
   padding: 10px;
   border-radius: 8px;
   display: inline-block;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promocion-validez:hover {
+  background-color: darkred;
+  text-decoration: none;
 }
 
 .promocion-beneficios {
@@ -685,4 +694,54 @@ footer a:hover {
   display: inline-block;
 }
 
+/* Estilos para la pasarela de pago */
+.resumen-items {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+.item-carrito h4 {
+  color: blue;
+  margin-bottom: 5px;
+}
+
+.item-carrito .precio {
+  font-weight: bold;
+  color: red;
+}
+
+.total-carrito {
+  text-align: right;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+#formulario-pago div {
+  margin-bottom: 20px;
+}
+
+#formulario-pago label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#formulario-pago input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
