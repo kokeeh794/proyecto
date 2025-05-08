@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - AlgeGym</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Logo AlgeGym" class="logo">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="planes.html">Planes</a></li>
+          <li><a href="horario.html">Horario</a></li>
+          <li><a href="informacion.html">Información</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="usuario.html">Mi Usuario</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="usuario-container">
+        <h2>Resumen de Compra</h2>
+        <div id="resumen-compra"></div>
+        <div><span>Adquiere un bono</span> <a href="/index.html#bonoP">Bonos</a></div>
+        
+        <form id="formulario-pago">
+          <h3>Información de Pago</h3>
+          
+          <div>
+            <label for="tarjeta">Número de Tarjeta</label>
+            <input type="text" id="tarjeta" placeholder="1234 5678 1234 5678" minlength="19" maxlength="19" required>
+          </div>
+          
+          <div>
+            <label for="fecha">Fecha de Expiración</label>
+            <input type="month" id="fecha" required>
+          </div>
+          
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" pattern="\d{3}" maxlength="3" required>
+          </div>
+          
+          <div>
+            <label for="nombre-tarjeta">Nombre en la Tarjeta</label>
+            <input type="text" id="nombre-tarjeta" required>
+          </div>
+          
+          <button type="submit" class="bono-btn">Pagar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 AlgeGym. Todos los derechos reservados.</p>
+      <a href="https://www.instagram.com/alge.gym/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/dolphinsgymalgeciras/" target="_blank">Facebook</a>
+      <a href="https://x.com/algegym" target="_blank">Twitter</a>
+    </footer>
+
+    <script src="pago.js"></script>
+  </body>
+  </html>
