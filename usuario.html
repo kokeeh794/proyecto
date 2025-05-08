@@ -47,12 +47,8 @@
           </div>
           <div>
             <label for="fecha-nacimiento">Fecha de nacimiento</label>
-            <input
-              type="date"
-              id="fecha-nacimiento"
-              name="fecha-nacimiento"
-              required
-            />
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required max="2011-12-31" />
+
           </div>
           <div>
             <label for="plan">Plan (opcional)</label>
@@ -134,6 +130,7 @@
         <div class="perfil-acciones">
           <button class="btn-editar">Editar perfil</button>
           <button class="btn-cerrar-sesion">Cerrar sesión</button>
+          <button class="btn-carrito" onclick="window.location.href='pago.html'">Carrito</button>
         </div>
       </div>
     </main>
