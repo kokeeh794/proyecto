@@ -22,8 +22,14 @@ function enviarMensaje() {
   }
   
   function generarRespuesta(mensaje) {
+    if (mensaje.includes("preguntas frecuentes") || mensaje.includes("preguntas") || mensaje.includes("frecuentes") ) {
+      return "Prueba a preguntar : horario, hora, precio, ubicacion, entrenador, clases, gracias, wifi, baño, cancelar, acceso, niños, material, clases, oferta, factura, aparcamiento...";
+    }
     if (mensaje.includes("horario") || mensaje.includes("hora")) {
       return "Nuestro horario es de lunes a viernes de 7:00 a 22:00, sábados de 9:00 a 14:00.";
+    }
+    if (mensaje.includes("hola") || mensaje.includes("que tal") || mensaje.includes("buenas")) {
+      return "Buenas, ¿en qué puedo ayudarte hoy?";
     }
     if (mensaje.includes("precio") || mensaje.includes("cuanto cuesta") || mensaje.includes("plan")) {
       return "Puedes consultar nuestros planes en la sección 'Planes'. Tenemos opciones desde 25€/mes.";
