@@ -21,13 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
           };
         } else if (buttonClass.includes('boton-plan')) {
           const plan = this.closest('.plan-card');
+          const planType = plan.classList.contains('familiar') ? 'familiar' : 
+                          plan.classList.contains('pareja') ? 'pareja' : 
+                          plan.classList.contains('jubilados') ? 'jubilado' : '';
+          
           item = {
             tipo: 'plan',
             nombre: plan.querySelector('h3').textContent,
             precio: parseFloat(plan.querySelector('.precio-plan').textContent.split('€')[0].replace(',', '.')),
             periodicidad: 'mensual',
-            beneficios: Array.from(plan.querySelectorAll('.beneficios-plan li')).map(li => li.textContent)
+            beneficios: Array.from(plan.querySelectorAll('.beneficios-plan li')).map(li => li.textContent),
+            planType: planType
           };
+          
+          // Actualizar el plan del usuario en localStorage
+          const usuario = JSON.parse(localStorage.getItem('usuarioAlgeGym'));
+          if (usuario) {
+            usuario.plan = planType;
+            localStorage.setItem('usuarioAlgeGym', JSON.stringify(usuario));
+          }
         }
         
         agregarAlCarrito(item);
