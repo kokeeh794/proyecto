@@ -31,11 +31,15 @@
         <form id="registro-form" action="registro.php" method="POST">
           <div>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required />
+            <input type="text" id="nombre" name="nombre" required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+              title="Solo se permiten letras y espacios" />
           </div>
           <div>
             <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" name="apellidos" required />
+            <input type="text" id="apellidos" name="apellidos" required
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+              title="Solo se permiten letras y espacios" />
           </div>
           <div>
             <label for="email">Correo electrónico</label>
@@ -43,12 +47,15 @@
           </div>
           <div>
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" />
+            <input type="tel" id="telefono" name="telefono"
+              inputmode="numeric"
+              pattern="[0-9]{9,15}"
+              maxlength="9"
+              title="Solo se permiten números (entre 9 y 15 dígitos)" />
           </div>
           <div>
             <label for="fecha-nacimiento">Fecha de nacimiento</label>
             <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required max="2011-12-31" />
-
           </div>
           <div>
             <label for="plan">Plan (opcional)</label>
@@ -120,10 +127,6 @@
               <span class="membresia-label">Próximo pago:</span>
               <span id="membresia-pago"></span>
             </div>
-            <div class="membresia-item">
-              <span class="membresia-label">Sesiones restantes:</span>
-              <span id="membresia-sesiones">Ilimitadas</span>
-            </div>
           </div>
         </div>
 
@@ -137,12 +140,8 @@
 
     <footer>
       <p>&copy; 2025 AlgeGym. Todos los derechos reservados.</p>
-      <a href="https://www.instagram.com/alge.gym/" target="_blank"
-        >Instagram</a
-      >
-      <a href="https://www.facebook.com/dolphinsgymalgeciras/" target="_blank"
-        >Facebook</a
-      >
+      <a href="https://www.instagram.com/alge.gym/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61576362897601" target="_blank">Facebook</a>
       <a href="https://x.com/algegym" target="_blank">Twitter</a>
     </footer>
 
