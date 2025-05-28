@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Verificar si el usuario está registrado
   const usuarioRegistrado = localStorage.getItem('usuarioAlgeGym');
   
   if (!usuarioRegistrado) {
-      // Redirigir al formulario de registro primero
       window.location.href = 'usuario.html?redirect=pago.html';
       return;
   }
@@ -11,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const carrito = JSON.parse(localStorage.getItem('carritoAlgeGym')) || [];
   const resumenCompra = document.getElementById('resumen-compra');
   
-  if (carrito.length === 0) {
+  if (carrito.length == 0) {
       resumenCompra.innerHTML = '<p>No hay items en tu carrito. <a href="planes.html">Ver planes</a></p>';
       return;
   }
@@ -46,6 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
   document.getElementById('formulario-pago').addEventListener('submit', function(e) {
       e.preventDefault();
+      
+      // Verificar si hay un plan en el carrito y actualizar el usuario
+      const carrito = JSON.parse(localStorage.getItem('carritoAlgeGym')) || [];
+      const planItem = carrito.find(item => item.tipo === 'plan');
+      
+      if (planItem && planItem.planType) {
+          const usuario = JSON.parse(localStorage.getItem('usuarioAlgeGym'));
+          if (usuario) {
+              usuario.plan = planItem.planType;
+              localStorage.setItem('usuarioAlgeGym', JSON.stringify(usuario));
+          }
+      }
       
       setTimeout(() => {
           localStorage.removeItem('carritoAlgeGym');
