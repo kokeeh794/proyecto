@@ -88,16 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const fechaRegistro = new Date();
     const proximoPago = new Date(fechaRegistro.setDate(fechaRegistro.getDate() + 30));
     if (membresiaPago) membresiaPago.textContent = proximoPago.toLocaleDateString('es-ES');
-
-    if (sesionesRestantes) {
-      if (usuario.bonos !== undefined) {
-        sesionesRestantes.textContent = `${usuario.bonos} días`;
-      } else if (!usuario.plan || usuario.plan === '') {
-        sesionesRestantes.textContent = '0';
-      } else {
-        sesionesRestantes.textContent = 'Ilimitadas';
-      }
-    }
   }
 
   const btnCerrarSesion = document.querySelector('.btn-cerrar-sesion');
