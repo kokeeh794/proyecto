@@ -86,3 +86,4 @@ function enviarMensaje() {
     return "No entendí muy bien tu consulta. ¿Podrías reformularla o ser más específico?";
   }
   
+  // Terminado
