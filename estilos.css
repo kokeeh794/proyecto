@@ -894,11 +894,11 @@ text-decoration: none
 }
 
 .tabla-ejercicios tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .tabla-ejercicios tr:hover {
-  background-color: #e0f7fa;
+  background-color: white;
 }
 
 .tabla-ejercicios td:first-child {
