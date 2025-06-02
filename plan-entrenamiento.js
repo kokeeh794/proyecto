@@ -125,7 +125,7 @@ function mostrarTabla(planId) {
   let tablaHTML = `<table class="tabla-ejercicios">
     <tr><th>Día</th><th>Ejercicio</th><th>Series/Reps</th></tr>`;
   datos.forEach(fila => {
-    if (fila[1].toLowerCase().includes("cardio")) return;  // Excluir cardio
+    if (fila[1].toLowerCase().includes("cardio")) return;  // Excluir cardio por errores
     tablaHTML += `<tr><td>${fila[0]}</td><td>${fila[1]}</td><td>${fila[2]}</td></tr>`;
   });
   tablaHTML += "</table>";
