@@ -7,3 +7,4 @@ document.querySelectorAll('.info-card').forEach(card => {
     });
   });
   
+  //Terminado
