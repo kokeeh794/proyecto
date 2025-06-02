@@ -16,6 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt = $conn->prepare($sql);
   $stmt->execute([$nombre, $apellidos, $email, $telefono, $fecha, $plan, $password]);
 
-  echo "Usuario registrado correctamente";
+  echo "Usuario registrado correctamente.";
 }
 ?>
