@@ -6,5 +6,5 @@ if (!isset($_SESSION['usuario_email'])) {
   exit();
 }
 
-echo "Bienvenido, " . htmlspecialchars($_SESSION['usuario_email']);
+echo " Bienvenido, " . htmlspecialchars($_SESSION['usuario_email']);
 ?>
