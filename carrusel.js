@@ -19,3 +19,5 @@ function anterior() {
 }
 
 setInterval(siguiente, 4000);
+          
+// Terminado
