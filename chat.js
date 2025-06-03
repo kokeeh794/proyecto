@@ -23,7 +23,7 @@ function enviarMensaje() {
   
   function generarRespuesta(mensaje) {
     if (mensaje.includes("preguntas frecuentes") || mensaje.includes("preguntas") || mensaje.includes("frecuentes") ) {
-      return "Prueba a preguntar : horario, hora, precio, ubicacion, entrenador, clases, gracias, wifi, baño, cancelar, acceso, niños, material, clases, oferta, factura, aparcamiento...";
+      return "Prueba a preguntar : horario, hora, precio, ubicacion, entrenador, clases, gracias, wifi, baño, cancelar, acceso, niños, material, clases, factura, aparcamiento...";
     }
     if (mensaje.includes("horario") || mensaje.includes("hora")) {
       return "Nuestro horario es de lunes a viernes de 7:00 a 22:00, sábados de 9:00 a 14:00.";
