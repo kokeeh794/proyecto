@@ -19,38 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (registroForm) {
     registroForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
       if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden');
+        e.preventDefault();
         return;
       }
-
-      const planSeleccionado = document.getElementById('plan').value;
-
-      const usuario = {
-        nombre: document.getElementById('nombre').value,
-        apellidos: document.getElementById('apellidos').value,
-        email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
-        fechaNacimiento: document.getElementById('fecha-nacimiento').value,
-        plan: planSeleccionado,
-        fechaRegistro: new Date().toLocaleDateString(),
-        bonos: planSeleccionado ? 30 : 0
-      };
-
-      localStorage.setItem('usuarioAlgeGym', JSON.stringify(usuario));
-      mostrarPerfil(usuario);
-      formularioRegistro.style.display = 'none';
-      perfilUsuario.style.display = 'block';
-      alert('¡Registro exitoso! Bienvenido a AlgeGym');
-
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('redirect')) {
-        window.location.href = params.get('redirect');
-      }
+      // No se bloquea el envío al servidor aquí.
     });
   }
 
@@ -64,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const planUsuario = document.getElementById('plan-usuario');
     const membresiaPlan = document.getElementById('membresia-plan');
     const membresiaPago = document.getElementById('membresia-pago');
-    const sesionesRestantes = document.getElementById('membresia-sesiones');
 
     if (nombreUsuario) nombreUsuario.textContent = usuario.nombre;
     if (nombreCompleto) nombreCompleto.textContent = `${usuario.nombre} ${usuario.apellidos}`;
